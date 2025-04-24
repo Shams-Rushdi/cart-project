@@ -74,21 +74,21 @@ const data = [
                   "image": "/product_images/4.jpg",
                 }
               ]
-                 
-
+                                                     
 const Products = () => {
   return (
                 <div className="container">
                      <div className="row">
+                                {
+                                data.map((product) => (
+                                <div className="col-md-3 my-4">
+                                                <Product product={product}/>
+                                                </div>
+                                ))
+                                }
                                 
-                                <div className="col-md-4">
-                                <Product product={{
-                                        "title": "Home",
-                                        "short_des": "Good",
-                                        "price": "1000",
-                                        "image":"/product_images/4.jpg"
-                                }}/>
-                                </div>
+                               
+                                
                       </div>
                 </div>     
       )
